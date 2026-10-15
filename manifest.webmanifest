@@ -1,0 +1,24 @@
+{
+  "name": "IPTV-DATI — METËSIA UNLIMITED",
+  "short_name": "IPTV-DATI",
+  "description": "Player web për playlistat IPTV që ke të drejtë t'i përdorësh.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050b17",
+  "theme_color": "#07152c",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

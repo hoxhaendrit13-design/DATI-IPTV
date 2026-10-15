@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07152c">
+<meta name="description" content="IPTV-DATI — player web për playlistat IPTV që ke të drejtë t'i përdorësh.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>IPTV-DATI | METËSIA UNLIMITED</title>
+<style>
+:root{color-scheme:dark;--bg:#050b17;--panel:#0b1830;--panel2:#102342;--text:#f4f8ff;--muted:#aabbd3;--blue:#168cff;--cyan:#35d8ff;--line:#20385c;--green:#35d8a3}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#173d70 0,transparent 55%),var(--bg);color:var(--text);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{width:min(900px,100%);margin:auto;padding:18px 14px 40px}.top{display:flex;align-items:center;gap:12px;padding:10px 2px 18px}.brandicon{width:54px;height:54px;flex-shrink:0}.brand h1{font-size:22px;line-height:1.1;margin:0;letter-spacing:.5px}.brand h1 span{color:var(--cyan)}.tag{font-size:11px;letter-spacing:3px;color:#b9d8ff;margin-top:5px}
+.hero{position:relative;overflow:hidden;border:1px solid #22518a;border-radius:22px;padding:23px 19px;background:linear-gradient(125deg,#0e2d58,#071225 65%);box-shadow:0 18px 48px #0005}.hero:after{content:"";position:absolute;width:200px;height:200px;right:-80px;top:-95px;border-radius:50%;background:#138dff26;filter:blur(2px)}.pill{display:inline-block;border:1px solid #1c6ca5;color:#7ce6ff;background:#062447;padding:4px 9px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:1.4px}.hero h2{font-size:29px;line-height:1.1;margin:13px 0 9px;max-width:480px}.hero h2 span{color:var(--cyan)}.hero p{color:var(--muted);margin:0;max-width:510px;font-size:14px}
+.grid{display:grid;grid-template-columns:1fr;gap:13px;margin-top:14px}.card{background:linear-gradient(145deg,#0d1d37,#091426);border:1px solid var(--line);border-radius:17px;padding:16px;min-width:0}.card h3{margin:0 0 9px;font-size:17px}.muted{color:var(--muted);font-size:13px;margin:6px 0 11px}
+input[type=file],input[type=url],input[type=search]{display:block;width:100%;background:#061021;border:1px solid #29466c;border-radius:11px;padding:12px;color:var(--text);margin:8px 0;font:inherit;font-size:14px;min-width:0}
+button,.button{display:inline-flex;justify-content:center;align-items:center;gap:8px;width:100%;border:0;border-radius:11px;background:linear-gradient(100deg,#0879ff,#08b8ed);color:#fff;font:inherit;font-weight:750;padding:12px 14px;margin-top:7px;cursor:pointer;text-decoration:none}.secondary{background:#152a48;border:1px solid #31517b;color:#eaf4ff}.status{font-size:12px;color:var(--muted);margin-top:9px;overflow-wrap:anywhere}
+video{width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;display:block;margin-top:7px}.channels{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}.channel{width:100%;display:flex;align-items:center;text-align:left;gap:10px;background:#102341;border:1px solid #1d3a60;color:var(--text);border-radius:12px;padding:10px;margin:0}.num{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#0a3559;color:var(--cyan);font-weight:900;flex-shrink:0}.chname{font-weight:700;font-size:14px;display:block}.churl{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#9eb4d0;font-size:10px}.empty{color:var(--muted);font-size:13px;padding:6px 0}.features{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:14px}.feature{border:1px solid var(--line);border-radius:13px;padding:12px;background:#09162a;font-size:12px;color:var(--muted)}.feature b{display:block;color:var(--text);font-size:13px;margin-bottom:3px}.symbol{font-size:19px;margin-bottom:5px}.notice{border-left:3px solid #e6b75b;padding:10px 12px;background:#211e16;color:#eed9a5;font-size:12px;border-radius:0 10px 10px 0;margin-top:14px}footer{text-align:center;color:#839ab9;font-size:11px;padding:20px 4px 5px}
+@media(min-width:650px){.wrap{padding:28px 20px 44px}.hero{padding:30px}.hero h2{font-size:38px}.grid{grid-template-columns:1fr 1fr}.wide{grid-column:1/-1}.channels{grid-template-columns:1fr 1fr}.features{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <img class="brandicon" src="icon.svg" alt="IPTV-DATI logo">
+    <div class="brand"><h1>IPTV-<span>DATI</span></h1><div class="tag">METËSIA UNLIMITED</div></div>
+  </header>
+  <section class="hero">
+    <span class="pill">PLAYER WEB</span>
+    <h2>Shiko me stil.<br><span>Pa kufi në dizajn.</span></h2>
+    <p>Një vend për playlistat e tua IPTV. Përdor vetëm kanale dhe transmetime që ke të drejtë t'i shikosh.</p>
+  </section>
+  <div class="features">
+    <div class="feature"><div class="symbol">📺</div><b>Player i integruar</b>Luaj stream-e të përputhshme</div>
+    <div class="feature"><div class="symbol">📂</div><b>Playlist M3U</b>Ngarko listën nga pajisja</div>
+    <div class="feature"><div class="symbol">📱</div><b>Mobile-first</b>Përshtatet me ekranin</div>
+    <div class="feature"><div class="symbol">🆓</div><b>Pa abonim</b>Website demonstrues falas</div>
+  </div>
+  <div class="grid">
+    <section class="card">
+      <h3>① Ngarko playlistën</h3>
+      <p class="muted">Zgjidh skedarin .m3u ose .m3u8 nga telefoni yt. Skedari përpunohet lokalisht në pajisje.</p>
+      <input id="playlistFile" type="file" accept=".m3u,.m3u8,.txt,audio/x-mpegurl,application/vnd.apple.mpegurl">
+      <button id="loadFile">Ngarko kanalet</button>
+      <div class="status" id="fileStatus" aria-live="polite">Nuk është ngarkuar asnjë listë.</div>
+    </section>
+    <section class="card">
+      <h3>② Luaj një stream</h3>
+      <p class="muted">Vendos URL-në e një transmetimi të ligjshëm që mbështetet nga shfletuesi.</p>
+      <input id="streamUrl" type="url" inputmode="url" placeholder="https://example.com/live.m3u8" autocomplete="off">
+      <button id="playUrl">Luaje stream-in</button>
+      <p class="status">Disa burime IPTV nuk punojnë në Safari/Chrome për shkak të formatit ose kufizimeve të ofruesit.</p>
+    </section>
+    <section class="card wide">
+      <h3>Player</h3>
+      <video id="player" controls playsinline preload="none"></video>
+      <div class="status" id="playerStatus" aria-live="polite">Zgjidh një kanal për ta nisur.</div>
+    </section>
+    <section class="card wide">
+      <h3>Playlistë / Kanalet</h3>
+      <input id="search" type="search" placeholder="Kërko kanal..." autocomplete="off">
+      <div id="channels" class="channels"><div class="empty">Kanalet e listës do të shfaqen këtu.</div></div>
+    </section>
+  </div>
+  <div class="notice">IPTV-DATI nuk përfshin lista IPTV ose kanale të palëve të treta. Përdor vetëm transmetime publike ose lista që je i autorizuar t'i përdorësh. Ky version është një player web, jo shërbim që furnizon kanale.</div>
+  <footer>IPTV-DATI · METËSIA UNLIMITED · Version web</footer>
+</main>
+<script>
+const fileInput=document.getElementById('playlistFile'),fileStatus=document.getElementById('fileStatus');
+const channelsEl=document.getElementById('channels'),searchEl=document.getElementById('search');
+const player=document.getElementById('player'),playerStatus=document.getElementById('playerStatus');
+let channels=[];
+function parseM3U(text){
+ const lines=text.replace(/^\\uFEFF/,'').split(/\\r?\\n/).map(x=>x.trim()).filter(Boolean);
+ const out=[];let name='';
+ for(const line of lines){
+  if(line.startsWith('#EXTINF')){
+   const comma=line.lastIndexOf(',');name=comma>=0?line.slice(comma+1).trim():'Kanal pa emër';
+   const m=line.match(/tvg-name="([^"]+)"/i);if(m&&(!name||name==='Kanal pa emër'))name=m[1];
+  }else if(!line.startsWith('#')&&/^https?:\\/\\//i.test(line)){out.push({name:name||`Kanal ${out.length+1}`,url:line});name='';}
+ }
+ return out;
+}
+function render(){
+ const q=searchEl.value.trim().toLocaleLowerCase();
+ const list=channels.filter(c=>c.name.toLocaleLowerCase().includes(q));
+ channelsEl.replaceChildren();
+ if(!list.length){const e=document.createElement('div');e.className='empty';e.textContent=channels.length?'Nuk u gjet asnjë kanal.':'Ngarko një playlistë për të parë kanalet.';channelsEl.append(e);return;}
+ list.forEach((ch,i)=>{const b=document.createElement('button');b.className='channel';b.type='button';
+ const n=document.createElement('span');n.className='num';n.textContent=String(i+1);
+ const d=document.createElement('span');d.style.minWidth='0';const nm=document.createElement('span');nm.className='chname';nm.textContent=ch.name;
+ const u=document.createElement('span');u.className='churl';u.textContent=ch.url;d.append(nm,u);b.append(n,d);b.addEventListener('click',()=>playChannel(ch));channelsEl.append(b);});
+}
+function playChannel(ch){player.pause();player.src=ch.url;player.load();playerStatus.textContent='Duke hapur: '+ch.name+'. Nëse nuk nis, stream-i mund të mos mbështetet nga shfletuesi.';player.play().catch(()=>{playerStatus.textContent='Nuk u nis automatikisht. Shtyp ▶ në player ose provo një stream të përputhshëm.';});}
+document.getElementById('loadFile').addEventListener('click',async()=>{
+ const file=fileInput.files&&fileInput.files[0];if(!file){fileStatus.textContent='Zgjidh një skedar M3U fillimisht.';return;}
+ try{channels=parseM3U(await file.text());render();fileStatus.textContent=`U gjetën ${channels.length} kanale. Lista nuk u dërgua në server.`;}catch(e){fileStatus.textContent='Nuk u lexua skedari. Provo një M3U të rregullt.';}
+});
+searchEl.addEventListener('input',render);
+document.getElementById('playUrl').addEventListener('click',()=>{
+ const url=document.getElementById('streamUrl').value.trim();
+ try{const u=new URL(url);if(!['http:','https:'].includes(u.protocol))throw new Error();playChannel({name:'Stream i drejtpërdrejtë',url:u.href});}
+ catch(e){playerStatus.textContent='Vendos një URL të vlefshme që fillon me https:// ose http://.';}
+});
+if('serviceWorker' in navigator && location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+</script>
+</body>
+</html>
